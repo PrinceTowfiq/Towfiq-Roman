@@ -30,7 +30,7 @@ class CreateMemberDataTable extends Migration
             $table->string("present_address");
             $table->string("permanent_address");
             $table->string("tshirt_size");
-            $table->string("favourite_sports");
+            $table->string("favorite_sports");
             $table->string("membership");
             $table->string("profession");
             $table->string("designation");
@@ -38,7 +38,6 @@ class CreateMemberDataTable extends Migration
             $table->string("image1");
             $table->string("image2");
             $table->timestamps();
-            // $table->timestamps();
         });
     }
 
