@@ -11,13 +11,13 @@
     <title>WELCOME</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <!-- Just an image -->
         <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-        <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" loading="lazy">
-        </a>
-  </nav>
+          <a class="navbar-brand" href="#">
+          <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" loading="lazy">
+          </a>
+        </nav>
         {{-- <a class="navbar-brand" href="#">Navbar</a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
