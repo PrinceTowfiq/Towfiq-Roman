@@ -15,7 +15,7 @@ use App\Http\Controllers\MemberController;
 */
 
 Route::get('/', function () {
-    return view('nav');
+    return view('web.index');
 });
 
-Route::get('/form', [MemberController::class, 'memberForm']);
+Route::get('/member-form', [MemberController::class, 'memberForm']);

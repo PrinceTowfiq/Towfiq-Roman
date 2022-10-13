@@ -8,6 +8,6 @@ class MemberController extends Controller
 {
     public function memberForm()
     {
-        return view('form');
+        return view('web.form');
     }
 }
