@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/form', [MemberController::class, 'memberForm']);
+Route::post('/form', [MemberController::class, 'storemember']);

@@ -10,4 +10,10 @@ class MemberController extends Controller
     {
         return view('form');
     }
+
+    public function storeMember()
+    {
+        return view('');
+    }
+
 }

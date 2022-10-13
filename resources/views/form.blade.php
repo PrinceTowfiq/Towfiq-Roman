@@ -56,112 +56,112 @@
     
               <div class="form-group col-md-6">
                 <label for="validationTooltip01">Member ID:</label>
-                <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                <input type="text" class="form-control" name="member_id" value="" required>
               </div>
     
               <div class="form-group col-md-6">
                 <label for="validationTooltip02">Name:</label>
-                <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                <input type="text" class="form-control" name="name" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip03">Father's Name:</label>
-                <input type="text" class="form-control" id="validationTooltip03" value="" required>
+                <input type="text" class="form-control" name="father_name" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip04">Mother's Name:</label>
-                <input type="text" class="form-control" id="validationTooltip04" value="" required>
+                <input type="text" class="form-control" name="mother_name" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip05">Spouse Name:</label>
-                <input type="text" class="form-control" id="validationTooltip05" value="" required>
+                <input type="text" class="form-control" name="spouse_name" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip06">Mobile No:</label>
-                <input type="text" class="form-control" id="validationTooltip06" value="" required>
+                <input type="text" class="form-control" name="mobile_number" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip07">Whatsapp No:</label>
-                <input type="text" class="form-control" id="validationTooltip07" value="" required>
+                <input type="text" class="form-control" name="whatsapp_number" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip08">Email address:</label>
-                <input type="text" class="form-control" id="validationTooltip09" value="" required>
+                <input type="text" class="form-control" name="email" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip09">Birth Date:</label> <br>
-                <input type="date" class="form-control" id="validationTooltip09" value="" required>
+                <input type="date" class="form-control" name="bob" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip10">Anniversary Date:</label> <br>
-                <input type="date" class="form-control" id="validationTooltip10" value="" required />
+                <input type="date" class="form-control" name="anniversary_date" value="" required />
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip11">NID no:</label>
-                <input type="text" class="form-control" id="validationTooltip011" value="" required>
+                <input type="text" class="form-control" name="nid" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip12">Address (Where CECL will Communicate):</label>
-                <input type="text" class="form-control" id="validationTooltip12" value="" required>
+                <input type="text" class="form-control" name="address" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip13">Present address:</label>
-                <input type="text" class="form-control" id="validationTooltip13" value="" required>
+                <input type="text" class="form-control" name="present_address" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip14">Permanent address:</label>
-                <input type="text" class="form-control" id="validationTooltip14" value="" required>
+                <input type="text" class="form-control" name="permanent_address" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip15">Tshirt Size:</label>
-                <input type="text" class="form-control" id="validationTooltip15" value="" required>
+                <input type="text" class="form-control" name="tshirt_size" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip16">Sports you played:</label>
-                <input type="text" class="form-control" id="validationTooltip16" value="" required>
+                <input type="text" class="form-control" name="favorite_sports" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip17">Membership nominated by:</label>
-                <input type="text" class="form-control" id="validationTooltip17" value="" required>
+                <input type="text" class="form-control" name="membership" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip18">Profession:</label>
-                <input type="text" class="form-control" id="validationTooltip18" value="" required>
+                <input type="text" class="form-control" name="profession" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip19"> Designation: </label>
-                <input type="text" class="form-control" id="validationTooltip19" value="" required>
+                <input type="text" class="form-control" name="designation" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip20">Organization: </label>
-                <input type="text" class="form-control" id="validationTooltip20" value="" required>
+                <input type="text" class="form-control" name="organization" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <input type="file" class="form-control-file" name="image1">
     
               </div>
               <div class="form-group col-md-6">
                 <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <input type="file" class="form-control-file" name="image2">
     
               </div>
     
