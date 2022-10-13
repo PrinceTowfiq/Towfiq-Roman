@@ -16,8 +16,8 @@ use App\Http\Controllers\MemberController;
 
 Route::get('/', function () {
     return view('web.index');
-});
+})->name('index');
 
 
-Route::get('/member-form', [MemberController::class, 'memberForm']);
+Route::get('/member-form', [MemberController::class, 'memberForm'])->name('memberForm');
 Route::post('/member-form', [MemberController::class, 'storeMemberData'])->name('storeMemberData');

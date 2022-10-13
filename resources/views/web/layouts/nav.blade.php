@@ -8,8 +8,8 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#features">Virtual Tour</a></li>
-          <li><a class="nav-link scrollto" href="#">Registration Form</a></li>
+          <li><a class="nav-link scrollto {{ Route::is('index')  ? 'active' : '' }}" href="{{route('index')}}#features">Virtual Tour</a></li>
+          <li><a class="nav-link scrollto {{ Route::is('memberForm')  ? 'active' : ''}}" href="{{route('memberForm')}}">Registration Form</a></li>
             </ul>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

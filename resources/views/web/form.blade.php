@@ -21,10 +21,10 @@
 
             <div class="row">
     
-              <div class="form-group col-md-6">
+              {{-- <div class="form-group col-md-6">
                 <label for="validationTooltip01">Member ID:</label>
                 <input type="text" class="form-control" name="member_id" value="" required>
-              </div>
+              </div> --}}
     
               <div class="form-group col-md-6">
                 <label for="validationTooltip02">Name:</label>
