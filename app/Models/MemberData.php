@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class MemberData extends Model
 {
     use HasFactory;
+
+    public $guarded = [];
 }

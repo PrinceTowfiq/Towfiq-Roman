@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('web.index');
 });
 
+
 Route::get('/member-form', [MemberController::class, 'memberForm']);
+Route::post('/member-form', [MemberController::class, 'storeMemberData'])->name('storeMemberData');
