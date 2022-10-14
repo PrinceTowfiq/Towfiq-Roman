@@ -1,7 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\Admin\MembersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,14 @@ Route::get('/', function () {
 
 Route::get('/member-form', [MemberController::class, 'memberForm'])->name('memberForm');
 Route::post('/member-form', [MemberController::class, 'storeMemberData'])->name('storeMemberData');
+
+Route::middleware(["auth"])->group(function () {
+
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.home');
+
+    Route::get('admin/members', [MembersController::class, 'index'])->name('admin.members');
+});
+
+Auth::routes(['register' => false]);
