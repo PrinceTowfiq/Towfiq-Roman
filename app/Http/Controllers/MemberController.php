@@ -15,13 +15,22 @@ class MemberController extends Controller
     public function storeMemberData(Request $request)
     {
 
+        $inputs = $request->except(['image']);
+
         $member = new MemberData();
-        $member->fill($request->all());
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('uploads/', $filename);
+            $inputs['image'] = $filename;
+        }
+        $member->fill($inputs);
         $dataSave = $member->save();
 
         if ($dataSave) {
-            return 'data save';
+            return redirect()->back()->with('success', 'Member information successfully save.');
         }
-        return 'error';
+        return redirect()->back()->with('error', 'Something wrong, please try again.');
     }
 }

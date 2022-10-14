@@ -13,7 +13,35 @@
         <div class="card-header text-center">
           Member Form
         </div>
-      
+
+        @if(session()->has('success'))
+
+          <script>
+            Swal.fire({
+              title: 'Member information successfully save.',
+              icon: 'success',
+              color: '#716add',
+              background: '#fff url(/images/trees.png)',
+              backdrop: `
+                rgba(0,0,123,0.4)
+                url("https://sweetalert2.github.io/images/nyan-cat.gif")
+                left top
+                no-repeat
+              `
+            })
+          </script>
+        @endif
+
+        @if(session()->has('error'))
+          <script>
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Something went wrong! Please try again.',
+            })
+          </script>
+        @endif
+
         <div class="card-body">
 
           <form class="col-md-12 my-3" method="POST" action="{{route('storeMemberData')}}" enctype="multipart/form-data" >
@@ -157,12 +185,8 @@
     
               </div>
               <div class="form-group col-md-6">
-                <label for="exampleFormControlFile1">Photo 1</label>
-                <input type="file" class="form-control" name="image1">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="exampleFormControlFile1">Photo 2</label>
-                <input type="file" class="form-control" name="image2">
+                <label for="">Member Photo</label>
+                <input type="file" class="form-control" name="image">
               </div>
 
               <button class="btn btn-primary mt-4" type="submit">Submit form</button>
@@ -177,3 +201,28 @@
     </div>
   </div>
 @endsection
+
+@push('custom-scripts')
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    // Swal.fire(
+    //   'The Internet?',
+    //   'That thing is still around?',
+    //   'question'
+    // );
+
+    // Swal.fire({
+    //   title: 'Custom width, padding, color, background.',
+    //   icon: 'success',
+    //   color: '#716add',
+    //   background: '#fff url(/images/trees.png)',
+    //   backdrop: `
+    //     rgba(0,0,123,0.4)
+    //     url("https://sweetalert2.github.io/images/nyan-cat.gif")
+    //     left top
+    //     no-repeat
+    //   `
+    // })
+
+  </script>
+@endpush

@@ -65,3 +65,5 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('web/js/main.js')}}"></script>
+
+  @stack('custom-scripts')
