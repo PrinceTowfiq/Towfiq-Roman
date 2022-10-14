@@ -87,17 +87,6 @@
             </div> <!--end col-->                               
         </div><!--end row-->  
 
-
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="header-title mt-0">Social Report</h4> 
-                        
-                    </div><!--end card-body--> 
-                </div><!--end card--> 
-            </div> <!--end col-->                               
-        </div><!--end row--> 
     </div>
     <!-- container -->
 
