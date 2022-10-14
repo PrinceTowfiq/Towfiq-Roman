@@ -35,8 +35,14 @@ class CreateMemberDataTable extends Migration
             $table->string("profession")->nullable();
             $table->string("designation")->nullable();
             $table->string("organization")->nullable();
-            $table->string("image1")->nullable();
-            $table->string("image2")->nullable();
+            $table->string("image")->nullable();
+            $table->string("spouse_dob")->nullable();
+            $table->string("child_name_1")->nullable();
+            $table->string("child_dob_1")->nullable();
+            $table->string("child_name_2")->nullable();
+            $table->string("child_dob_2")->nullable();
+            $table->string("child_name_3")->nullable();
+            $table->string("child_dob_3")->nullable();
             $table->timestamps();
         });
     }

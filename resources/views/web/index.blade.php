@@ -17,13 +17,13 @@
         <div class="col-xl-2 col-md-4">
             <div class="icon-box">
             <i class="ri-store-line"></i>
-            <h3><a href=""> Registration </a></h3>
+            <h3><a href="{{route('memberForm')}}"> Conenct Form </a></h3>
             </div>
         </div>
         <div class="col-xl-2 col-md-4">
             <div class="icon-box">
             <i class="ri-calendar-todo-line"></i>
-            <h3><a href="#features"> Virtual Tour</a></h3>
+            <h3><a href="{{route('index')}}#features"> Virtual Tour</a></h3>
             </div>
         </div>
         

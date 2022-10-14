@@ -21,10 +21,10 @@
 
             <div class="row">
     
-              {{-- <div class="form-group col-md-6">
+              <div class="form-group col-md-6">
                 <label for="validationTooltip01">Member ID:</label>
                 <input type="text" class="form-control" name="member_id" value="" required>
-              </div> --}}
+              </div>
     
               <div class="form-group col-md-6">
                 <label for="validationTooltip02">Name:</label>
@@ -39,13 +39,8 @@
               <div class="form-group col-md-6">
                 <label for="validationTooltip04">Mother's Name:</label>
                 <input type="text" class="form-control" name="mother_name" value="" required>
-    
               </div>
-              <div class="form-group col-md-6">
-                <label for="validationTooltip05">Spouse Name:</label>
-                <input type="text" class="form-control" name="spouse_name" value="" required>
-    
-              </div>
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip06">Mobile No:</label>
                 <input type="text" class="form-control" name="mobile_number" value="" required>
@@ -54,23 +49,63 @@
               <div class="form-group col-md-6">
                 <label for="validationTooltip07">Whatsapp No:</label>
                 <input type="text" class="form-control" name="whatsapp_number" value="" required>
-    
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip08">Email address:</label>
                 <input type="text" class="form-control" name="email" value="" required>
-    
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip09">Birth Date:</label> <br>
                 <input type="date" class="form-control" name="bob" value="" required>
-    
               </div>
+
+              <div class="form-group col-md-6">
+                <label for="validationTooltip05">Spouse Name:</label>
+                <input type="text" class="form-control" name="spouse_name" value="" required>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="validationTooltip10">Spouse Date of Birth:</label> <br>
+                <input type="date" class="form-control" name="spouse_dob" value="" required />
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="">Child Name (1):</label>
+                <input type="text" class="form-control" name="child_name_1" value="" >
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="">Dath of Birth (1):</label> <br>
+                <input type="date" class="form-control" name="child_dob_1" value=""  />
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="">Child Name (2):</label>
+                <input type="text" class="form-control" name="child_name_2" value="" >
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="">Dath of Birth (2):</label> <br>
+                <input type="date" class="form-control" name="child_dob_2" value=""  />
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="">Child Name (3):</label>
+                <input type="text" class="form-control" name="child_name_3" value="" >
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="">Dath of Birth (3):</label> <br>
+                <input type="date" class="form-control" name="child_dob_3" value=""  />
+              </div>
+
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip10">Anniversary Date:</label> <br>
                 <input type="date" class="form-control" name="anniversary_date" value="" required />
-    
               </div>
+
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip11">NID no:</label>
                 <input type="text" class="form-control" name="nid" value="" required>
