@@ -12,7 +12,7 @@
                    <img src="{{asset('admin/images/logo-dark.png')}}" alt="logo-large" class="logo-lg">
                </span> --}}
               <h3>
-                Admin Home
+                CECL Admin
               </h3>
            </a>
        </div>
