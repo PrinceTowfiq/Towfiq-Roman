@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title>S B Solution - Admin Dashboard</title>
+<title>CECL - Admin Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="A premium admin dashboard template by mannatthemes" name="description" />
 <meta content="Mannatthemes" name="author" />

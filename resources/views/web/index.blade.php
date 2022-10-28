@@ -8,8 +8,9 @@
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
+            <img src="{{asset('cecl-logo.png')}}" alt="" srcset="" width="130px">
+            <h2>Connecting to create opportunities</h2>
             <h1>Welcome to CECL <span></span></h1>
-            <h2>Please fill up give Information form </h2>
         </div>
         </div>
 
@@ -17,13 +18,13 @@
         <div class="col-xl-2 col-md-4">
             <div class="icon-box">
             <i class="ri-store-line"></i>
-            <h3><a href="{{route('memberForm')}}"> Conenct Form </a></h3>
+            <h5><a href="{{route('memberForm')}}">Members information Form</a></h5>
             </div>
         </div>
         <div class="col-xl-2 col-md-4">
             <div class="icon-box">
             <i class="ri-calendar-todo-line"></i>
-            <h3><a href="{{route('index')}}#features"> Virtual Tour</a></h3>
+            <h5><a href="{{route('index')}}#features">Visit the Club Virtually</a></h5>
             </div>
         </div>
         

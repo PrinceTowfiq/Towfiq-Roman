@@ -141,12 +141,22 @@
 
     <script>
             $(document).ready(function() {
-                    $('#member-datatable').DataTable( {
-                            dom: 'Bfrtip',
-                            buttons: [
-                            'copy', 'csv', 'excel', 'pdf', 'print'
-                            ]
-                    } );
+                    // $('#member-datatable').DataTable( {
+                    //         dom: 'Bfrtip',
+                    //         buttons: [
+                    //         'copy', 'csv', 'excel', 'pdf', 'print'
+                    //         ]
+                    // } );
+
+                    $("#member-datatable").DataTable({
+                        stripHtml: !1,
+                        dom: 'Bfrtip',
+                        buttons: ['copyHtml5', 'csvHtml5', 'pdfHtml5']
+                    })
+                    $('button').on('click', function(e) {
+                        window.open('data:application/vnd.ms-excel,' + encodeURIComponent( document.getElementById('tableComments').outerHTML));
+                    })
+
             } );       
     </script>
 @endpush
