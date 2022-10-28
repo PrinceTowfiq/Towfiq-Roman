@@ -83,7 +83,7 @@
                 <input type="text" class="form-control" name="email" value="" required>
               </div>
               <div class="form-group col-md-6">
-                <label for="validationTooltip09">Birth Date:</label> <br>
+                <label for="validationTooltip09">Date of Birth:</label> <br>
                 <input type="date" class="form-control" name="bob" value="" required>
               </div>
 
@@ -133,26 +133,58 @@
                 <input type="date" class="form-control" name="anniversary_date" value="" required />
               </div>
 
-
               <div class="form-group col-md-6">
-                <label for="validationTooltip11">NID no:</label>
-                <input type="text" class="form-control" name="nid" value="" required>
+                <label for="validationTooltip18">Profession:</label>
+                <input type="text" class="form-control" name="profession" value="" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="validationTooltip19"> Designation: </label>
+                <input type="text" class="form-control" name="designation" value="" required>
     
               </div>
+              <div class="form-group col-md-6">
+                <label for="validationTooltip20">Organization: </label>
+                <input type="text" class="form-control" name="organization" value="" required>
+              </div>
+            
+
+              <div class="form-group col-md-6">
+                <label for="">Blood Group</label>
+                <select class="form-control" required name="blood_group" id="">
+                  <option value="">--select one--</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="validationTooltip11">NID Number:</label>
+                <input type="text" class="form-control" name="nid" value="" required>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="validationTooltip11">TIN Number:</label>
+                <input type="text" class="form-control" name="tin" value="" required>
+              </div>
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip12">Address (Where CECL will Communicate):</label>
                 <input type="text" class="form-control" name="address" value="" required>
-    
               </div>
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip13">Present address:</label>
                 <input type="text" class="form-control" name="present_address" value="" required>
-    
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip14">Permanent address:</label>
                 <input type="text" class="form-control" name="permanent_address" value="" required>
-    
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip15">Tshirt Size:</label>
@@ -165,29 +197,14 @@
     
               </div>
               <div class="form-group col-md-6">
-                <label for="validationTooltip17">Membership nominated by:</label>
-                <input type="text" class="form-control" name="membership" value="" required>
-    
-              </div>
-              <div class="form-group col-md-6">
-                <label for="validationTooltip18">Profession:</label>
-                <input type="text" class="form-control" name="profession" value="" required>
-    
-              </div>
-              <div class="form-group col-md-6">
-                <label for="validationTooltip19"> Designation: </label>
-                <input type="text" class="form-control" name="designation" value="" required>
-    
-              </div>
-              <div class="form-group col-md-6">
-                <label for="validationTooltip20">Organization: </label>
-                <input type="text" class="form-control" name="organization" value="" required>
-    
-              </div>
-              <div class="form-group col-md-6">
-                <label for="">Member Photo</label>
+                <label for="">Member Photo:</label>
                 <input type="file" class="form-control" name="image">
               </div>
+              <div class="form-group col-md-6">
+                <label for="validationTooltip17">Membership Referred by:</label>
+                <input type="text" class="form-control" name="membership" value="" required>
+              </div>
+
 
               <button class="btn btn-primary mt-4" type="submit">Submit form</button>
     
