@@ -97,17 +97,20 @@
                 <input type="date" class="form-control" name="spouse_dob" value="" required />
               </div>
 
-              <div class="form-group col-md-6">
-                <label for="">Child Name (1):</label>
-                <input type="text" class="form-control" name="child_name_1" value="" >
-              </div>
+              <span id="" class="row child_data">
+                <div class="form-group col-md-6">
+                  <label for="">Child Name:</label>
+                  <input type="text" class="form-control" name="child_name_1" value="" >
+                </div>
+  
+                <div class="form-group col-md-6">
+                  <label for="">Dath of Birth:</label> <br>
+                  <input type="date" class="form-control" name="child_dob_1" value=""  />
+                </div>
+                <a href="#" id="addMore" class="change">add more</a>
+              </span>
 
-              <div class="form-group col-md-6">
-                <label for="">Dath of Birth (1):</label> <br>
-                <input type="date" class="form-control" name="child_dob_1" value=""  />
-              </div>
-
-              <div class="form-group col-md-6">
+              {{-- <div class="form-group col-md-6">
                 <label for="">Child Name (2):</label>
                 <input type="text" class="form-control" name="child_name_2" value="" >
               </div>
@@ -125,7 +128,7 @@
               <div class="form-group col-md-6">
                 <label for="">Dath of Birth (3):</label> <br>
                 <input type="date" class="form-control" name="child_dob_3" value=""  />
-              </div>
+              </div> --}}
 
 
               <div class="form-group col-md-6">
@@ -220,6 +223,7 @@
 @endsection
 
 @push('custom-scripts')
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     // Swal.fire(
@@ -240,6 +244,43 @@
     //     no-repeat
     //   `
     // })
+
+    $(document ).ready(function() {
+      max = 4;
+      var i = 2;
+
+      $('#addMore').click(function (e) { 
+        e.preventDefault();
+
+
+        html2 = '<span id="" class="row child_data">' +
+                '<div class="form-group col-md-6">' +
+                  '<label for="">Child Name:</label>' +
+                  '<input type="text" class="form-control" name="child_name_'+i+'" value="" >' +
+                '</div>' +
+                '<div class="form-group col-md-6">' +
+                  '<label for="">Dath of Birth:</label> <br>' +
+                  '<input type="date" class="form-control" name="child_dob_'+i+'" value=""  />' +
+                '</div>' +
+                '<a href="#" class="remove" style="color:#bb0010;">-remove</a>' +
+              '</span>';
+
+
+        var html = $(".child_data").first().clone();
+        if (i < max) {
+          // $(html2).find(".change").html("<a class='remove' style='color:#bb0010;'>-remove</a>");
+          $(".child_data").last().after(html2);
+          i++;
+        }
+
+      });
+      $("body").on("click",".remove",function(){ 
+        if (i <=max) {
+          $(this).parents(".child_data").remove();
+          i--;
+        }
+      });
+    });
 
   </script>
 @endpush
