@@ -18,7 +18,7 @@
         <div class="col-xl-2 col-md-4">
             <div class="icon-box">
             <i class="ri-store-line"></i>
-            <h5><a href="{{route('memberForm')}}">Members information Form</a></h5>
+            <h5><a href="{{route('memberForm')}}">Members Information Form</a></h5>
             </div>
         </div>
         <div class="col-xl-2 col-md-4">

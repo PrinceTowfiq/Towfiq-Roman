@@ -9,8 +9,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto {{ Route::is('index')  ? 'active' : '' }}" href="{{route('index')}}#features">Virtual Tour</a></li>
-          <li><a class="nav-link scrollto {{ Route::is('memberForm')  ? 'active' : ''}}" href="{{route('memberForm')}}">Conenct  Form</a></li>
-            </ul>
+          <li><a class="nav-link scrollto {{ Route::is('memberForm')  ? 'active' : ''}}" href="{{route('memberForm')}}">Contact Form</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

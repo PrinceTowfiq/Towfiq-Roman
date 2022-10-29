@@ -183,11 +183,12 @@
 
               <div class="form-group col-md-6">
                 <label for="validationTooltip13">Present address:</label>
-                <input type="text" class="form-control" name="present_address" value="" required>
+                <input type="text" class="form-control" id="present_address" name="present_address" value="" required>
               </div>
               <div class="form-group col-md-6">
-                <label for="validationTooltip14">Permanent address:</label>
-                <input type="text" class="form-control" name="permanent_address" value="" required>
+                <label for="validationTooltip14" class="float-left">Permanent address:</label> 
+                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> same as present address</span>
+                <input type="text" class="form-control" id="permanent_address" name="permanent_address" value="" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip15">Tshirt Size:</label>
@@ -279,6 +280,17 @@
           $(this).parents(".child_data").remove();
           i--;
         }
+      });
+
+      $('#vehicle1').change(function(){
+          if ($('#vehicle1').is(':checked') == true){
+              var address = $('#present_address').val();
+              $('#permanent_address').val(address).prop('disabled', true);
+              console.log(address);
+          } else {
+              $('#permanent_address').val('').prop('disabled', false);
+              console.log('unchecked');
+          }
       });
     });
 
