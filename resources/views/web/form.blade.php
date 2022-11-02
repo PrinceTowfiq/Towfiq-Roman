@@ -198,7 +198,10 @@
               <div class="form-group col-md-6">
                 <label for="validationTooltip16">Sports you played:</label>
                 <input type="text" class="form-control" name="favorite_sports" value="" required>
-    
+              </div>
+              <div class="form-group col-md-6">
+                <label for="cultural_engagement">Cultural Engagement:</label>
+                <input type="text" class="form-control" name="cultural_engagement" placeholder="music,dance,etc" value="" >
               </div>
               <div class="form-group col-md-6">
                 <label for="">Member Photo:</label>

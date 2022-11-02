@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddNewColmonAtMemberData extends Migration
+class AddNewColmonAtMemberDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class AddNewColmonAtMemberData extends Migration
     public function up()
     {
         Schema::table('member_data', function (Blueprint $table) {
-            $table->string("tin")->nullable();
-            $table->string("blood_group")->nullable();
+            $table->string("cultural_engagement")->nullable();
         });
     }
 
@@ -27,8 +26,7 @@ class AddNewColmonAtMemberData extends Migration
     public function down()
     {
         Schema::table('member_data', function (Blueprint $table) {
-            $table->dropColumn('tin');
-            $table->dropColumn('blood_group');
+            $table->dropColumn('cultural_engagement');
         });
     }
 }
