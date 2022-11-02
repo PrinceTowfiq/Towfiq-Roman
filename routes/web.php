@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommonController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\Admin\MembersController;
 
@@ -23,6 +24,7 @@ Route::get('/', function () {
 
 Route::get('/member-form', [MemberController::class, 'memberForm'])->name('memberForm');
 Route::post('/member-form', [MemberController::class, 'storeMemberData'])->name('storeMemberData');
+Route::get('/virtual-tour', [CommonController::class, 'virtualTour'])->name('virtualTour');
 
 Route::middleware(["auth"])->group(function () {
 

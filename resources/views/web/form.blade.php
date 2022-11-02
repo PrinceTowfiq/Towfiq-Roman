@@ -11,7 +11,7 @@
     <div class="row" style="margin-top: 10%;">
       <div class="card my-4">
         <div class="card-header text-center">
-          Member Form
+          Member Information Form
         </div>
 
         @if(session()->has('success'))
