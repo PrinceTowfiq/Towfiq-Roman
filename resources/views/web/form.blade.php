@@ -71,16 +71,16 @@
 
               <div class="form-group col-md-6">
                 <label for="validationTooltip06">Mobile No:</label>
-                <input type="text" class="form-control" name="mobile_number" value="" required>
+                <input type="text" class="form-control" placeholder="01XXXXXXXXX" name="mobile_number" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip07">Whatsapp No:</label>
-                <input type="text" class="form-control" name="whatsapp_number" value="" required>
+                <input type="text" class="form-control" placeholder="01XXXXXXXXX" name="whatsapp_number" value="" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip08">Email address:</label>
-                <input type="text" class="form-control" name="email" value="" required>
+                <input type="text" class="form-control" placeholder="example@mail.com" name="email" value="" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip09">Date of Birth:</label> <br>
@@ -110,43 +110,24 @@
                 <a href="#" id="addMore" class="change">add more</a>
               </span>
 
-              {{-- <div class="form-group col-md-6">
-                <label for="">Child Name (2):</label>
-                <input type="text" class="form-control" name="child_name_2" value="" >
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="">Dath of Birth (2):</label> <br>
-                <input type="date" class="form-control" name="child_dob_2" value=""  />
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="">Child Name (3):</label>
-                <input type="text" class="form-control" name="child_name_3" value="" >
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="">Dath of Birth (3):</label> <br>
-                <input type="date" class="form-control" name="child_dob_3" value=""  />
-              </div> --}}
-
-
               <div class="form-group col-md-6">
                 <label for="validationTooltip10">Anniversary Date:</label> <br>
                 <input type="date" class="form-control" name="anniversary_date" value="" required />
               </div>
-
+              <div class="form-group col-md-6">
+                <label for="validationTooltip10"></label> <br>
+              </div>
+              <hr class="mt-3">
               <div class="form-group col-md-6">
                 <label for="validationTooltip18">Profession:</label>
-                <input type="text" class="form-control" name="profession" value="" required>
+                <input type="text" class="form-control" placeholder="Ex: Private Job, Govt. Job , Business, etc. " name="profession" value="" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip19"> Designation: </label>
-                <input type="text" class="form-control" name="designation" value="" required>
-    
+                <input type="text" class="form-control" placeholder="" name="designation" value="" required>
               </div>
               <div class="form-group col-md-6">
-                <label for="validationTooltip20">Organization: </label>
+                <label for="validationTooltip20">Current Organisation/Company Name: </label>
                 <input type="text" class="form-control" name="organization" value="" required>
               </div>
             
@@ -177,39 +158,59 @@
               </div>
 
               <div class="form-group col-md-6">
-                <label for="validationTooltip12">Address (Where CECL will Communicate):</label>
-                <input type="text" class="form-control" name="address" value="" required>
+                <label for="validationTooltip15">Tshirt Size:</label>
+                <select class="form-control" required name="tshirt_size" id="">
+                  <option value="">--select one--</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                  <option value="XXL">XXL</option>
+                </select>
               </div>
 
               <div class="form-group col-md-6">
                 <label for="validationTooltip13">Present address:</label>
                 <input type="text" class="form-control" id="present_address" name="present_address" value="" required>
               </div>
+
+              
+              <div class="form-group col-md-6">
+                <label for="validationTooltip12">Address (Where CECL will Communicate):</label>
+                <input type="text" class="form-control" id="address" name="address" value="" required>
+                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle2" name="" value=""> same as present address</span>
+              </div>
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip14" class="float-left">Permanent address:</label> 
-                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> same as present address</span>
                 <input type="text" class="form-control" id="permanent_address" name="permanent_address" value="" required>
+                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle1" name="" value=""> same as present address</span>
               </div>
-              <div class="form-group col-md-6">
-                <label for="validationTooltip15">Tshirt Size:</label>
-                <input type="text" class="form-control" name="tshirt_size" value="" required>
-    
-              </div>
+
               <div class="form-group col-md-6">
                 <label for="validationTooltip16">Sports you played:</label>
-                <input type="text" class="form-control" name="favorite_sports" value="" required>
+                <select class="form-control" required name="blood_group" id="">
+                  <option value="">--select one--</option>
+                  <option value="Football">Football</option>
+                  <option value="Cricket">Cricket</option>
+                  <option value="Snooker">Snooker</option>
+                  <option value="Chess">Chess</option>
+                  <option value="Badminton">Badminton</option>
+                  <option value="Tennis">Tennis</option>
+                </select>
               </div>
               <div class="form-group col-md-6">
                 <label for="cultural_engagement">Cultural Engagement:</label>
-                <input type="text" class="form-control" name="cultural_engagement" placeholder="music,dance,etc" value="" >
+                <input type="text" class="form-control" required name="cultural_engagement" placeholder="Ex: Can- sing, play guitar, play drums, play key board, ply harmonium, play other instruments" value="" >
               </div>
               <div class="form-group col-md-6">
                 <label for="">Member Photo:</label>
-                <input type="file" class="form-control" name="image">
+                <input type="file" class="form-control" required name="image">
               </div>
               <div class="form-group col-md-6">
-                <label for="validationTooltip17">Membership Referred by:</label>
-                <input type="text" class="form-control" name="membership" value="" required>
+                <label for="validationTooltip17">Membership ID (referred by):</label>
+                <input type="text" class="form-control" name="membership" value="" >
               </div>
 
 
@@ -288,11 +289,19 @@
       $('#vehicle1').change(function(){
           if ($('#vehicle1').is(':checked') == true){
               var address = $('#present_address').val();
-              $('#permanent_address').val(address).prop('disabled', true);
+              $('#permanent_address').val(address).prop('readonly', true);
               console.log(address);
           } else {
-              $('#permanent_address').val('').prop('disabled', false);
-              console.log('unchecked');
+              $('#permanent_address').val('').prop('readonly', false);
+          }
+      });
+
+      $('#vehicle2').change(function(){
+          if ($('#vehicle2').is(':checked') == true){
+              var address = $('#present_address').val();
+              $('#address').val(address).prop('readonly', true);
+          } else {
+              $('#address').val('').prop('readonly', false);
           }
       });
     });
