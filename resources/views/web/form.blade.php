@@ -170,22 +170,22 @@
                 </select>
               </div>
 
-              <div class="form-group col-md-6">
-                <label for="validationTooltip13">Present address:</label>
-                <input type="text" class="form-control" id="present_address" name="present_address" value="" required>
-              </div>
-
-              
+                            
               <div class="form-group col-md-6">
                 <label for="validationTooltip12">Address (Where CECL will Communicate):</label>
                 <input type="text" class="form-control" id="address" name="address" value="" required>
-                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle2" name="" value=""> same as present address</span>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="validationTooltip13">Present address:</label>
+                <input type="text" class="form-control" id="present_address" name="present_address" value="" required>
+                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle2" name="" value=""> same as address</span>
               </div>
 
               <div class="form-group col-md-6">
                 <label for="validationTooltip14" class="float-left">Permanent address:</label> 
                 <input type="text" class="form-control" id="permanent_address" name="permanent_address" value="" required>
-                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle1" name="" value=""> same as present address</span>
+                <span class="text-primary " style="float: right;" > <input type="checkbox" id="vehicle1" name="" value=""> same as address</span>
               </div>
 
               <div class="form-group col-md-6">
@@ -288,7 +288,7 @@
 
       $('#vehicle1').change(function(){
           if ($('#vehicle1').is(':checked') == true){
-              var address = $('#present_address').val();
+              var address = $('#address').val();
               $('#permanent_address').val(address).prop('readonly', true);
               console.log(address);
           } else {
@@ -298,10 +298,10 @@
 
       $('#vehicle2').change(function(){
           if ($('#vehicle2').is(':checked') == true){
-              var address = $('#present_address').val();
-              $('#address').val(address).prop('readonly', true);
+              var address = $('#address').val();
+              $('#present_address').val(address).prop('readonly', true);
           } else {
-              $('#address').val('').prop('readonly', false);
+              $('#present_address').val('').prop('readonly', false);
           }
       });
     });
