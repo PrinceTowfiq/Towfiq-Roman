@@ -71,12 +71,14 @@
 
               <div class="form-group col-md-6">
                 <label for="validationTooltip06">Mobile No:</label>
-                <input type="text" class="form-control" placeholder="01XXXXXXXXX" name="mobile_number" value="" required>
+                <input type="text" class="form-control" placeholder="01XXXXXXXXX" id="mobile_number" name="mobile_number" value="" required>
     
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip07">Whatsapp No:</label>
-                <input type="text" class="form-control" placeholder="01XXXXXXXXX" name="whatsapp_number" value="" required>
+                <input type="text" class="form-control" placeholder="01XXXXXXXXX" id="whatsapp_number" name="whatsapp_number" value="" required>
+                <span class="text-primary " style="float: right;" > <input type="checkbox" id="same_number" name="" value=""> same as mobile number</span>
+
               </div>
               <div class="form-group col-md-6">
                 <label for="validationTooltip08">Email address:</label>
@@ -97,13 +99,13 @@
                 <input type="date" class="form-control" name="spouse_dob" value="" required />
               </div>
 
-              <span id="" class="row child_data">
-                <div class="form-group col-md-6">
+              <span id="" class="row child_data ">
+                <div class="form-group col-md-6 " style="padding-right: 0; ">
                   <label for="">Child Name:</label>
                   <input type="text" class="form-control" name="child_name_1" value="" >
                 </div>
   
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6" style="padding-right: 0; padding-left: calc(var(--bs-gutter-x) * 1);">
                   <label for="">Dath of Birth:</label> <br>
                   <input type="date" class="form-control" name="child_dob_1" value=""  />
                 </div>
@@ -304,6 +306,18 @@
               $('#present_address').val('').prop('readonly', false);
           }
       });
+
+      $('#same_number').change(function(){
+          if ($('#same_number').is(':checked') == true){
+              var mobile_number = $('#mobile_number').val();
+              $('#whatsapp_number').val(mobile_number).prop('readonly', true);
+          } else {
+              $('#whatsapp_number').val('').prop('readonly', false);
+          }
+      });
+
+
+
     });
 
   </script>
