@@ -24,7 +24,6 @@
               background: '#fff url(/images/trees.png)',
               backdrop: `
                 rgba(0,0,123,0.4)
-                url("https://sweetalert2.github.io/images/nyan-cat.gif")
                 left top
                 no-repeat
               `
@@ -106,7 +105,7 @@
                 </div>
   
                 <div class="form-group col-md-6" style="padding-right: 0; padding-left: calc(var(--bs-gutter-x) * 1);">
-                  <label for="">Dath of Birth:</label> <br>
+                  <label for="">Date of Birth:</label> <br>
                   <input type="date" class="form-control" name="child_dob_1" value=""  />
                 </div>
                 <a href="#" id="addMore" class="change">add more</a>
@@ -192,19 +191,20 @@
 
               <div class="form-group col-md-6">
                 <label for="validationTooltip16">Sports you played:</label>
-                <select class="form-control" required name="blood_group" id="">
+                <select id="choices-multiple-remove-button" placeholder="Select upto 5 " name="favorite_sports[]" multiple>
                   <option value="">--select one--</option>
                   <option value="Football">Football</option>
                   <option value="Cricket">Cricket</option>
-                  <option value="Snooker">Snooker</option>
+                  <option value="Billiard">Billiard</option>
                   <option value="Chess">Chess</option>
                   <option value="Badminton">Badminton</option>
                   <option value="Tennis">Tennis</option>
-                </select>
+              </select> 
               </div>
+              
               <div class="form-group col-md-6">
                 <label for="cultural_engagement">Cultural Engagement:</label>
-                <input type="text" class="form-control" required name="cultural_engagement" placeholder="Ex: Can- sing, play guitar, play drums, play key board, ply harmonium, play other instruments" value="" >
+                <input type="text" class="form-control" required name="cultural_engagement" placeholder="Ex: Can- sing, play guitar, play drums, play key board, play harmonium, play other instruments" value="" >
               </div>
               <div class="form-group col-md-6">
                 <label for="">Member Photo:</label>
@@ -232,6 +232,7 @@
 @push('custom-scripts')
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
   <script>
     // Swal.fire(
     //   'The Internet?',
@@ -253,6 +254,14 @@
     // })
 
     $(document ).ready(function() {
+
+      var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+        removeItemButton: true,
+        maxItemCount:5,
+        searchResultLimit:5,
+        renderChoiceLimit:5
+      }); 
+     
       max = 4;
       var i = 2;
 

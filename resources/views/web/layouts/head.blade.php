@@ -25,12 +25,7 @@
     <!-- Template Main CSS File -->
     <link href="{{asset('web/css/style.css')}}" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
 
-    <!-- =======================================================
-    * Template Name: Gp - v4.9.1
-    * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
   </head>
   

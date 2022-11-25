@@ -37,8 +37,10 @@ class MemberController extends Controller
             'cultural_engagement' => 'required',
             'image' => 'required'
         ]);
+        $favorite_sports = json_encode($request->favorite_sports);
 
-        $inputs = $request->except(['image']);
+        $inputs = $request->except(['image', 'favorite_sports']);
+        $inputs['favorite_sports'] = $favorite_sports;
 
         $member = new MemberData();
         if ($request->hasFile('image')) {
