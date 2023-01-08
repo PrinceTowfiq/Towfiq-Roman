@@ -163,7 +163,7 @@
         </div>
         <div class="modal-body">
             <div class="my-3 text-center rounded-circle">
-                <img class=" rounded-circle image" style="width: 100%;" src="https://i.picsum.photos/id/702/200/200.jpg?hmac=_MUIgyTefzE4vp8ty09HrdKNmvqdpg5tbSxk6FpIfcE" alt="" srcset="">
+                <img class=" rounded-circle image" style="width: 100%; max-width:200px;" src="https://i.picsum.photos/id/702/200/200.jpg?hmac=_MUIgyTefzE4vp8ty09HrdKNmvqdpg5tbSxk6FpIfcE" alt="" srcset="">
             </div>
             <table class="table table-bordered">
                 <tbody>
