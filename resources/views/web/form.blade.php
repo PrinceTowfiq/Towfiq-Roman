@@ -167,7 +167,7 @@
                   <option value="L">L</option>
                   <option value="XL">XL</option>
                   <option value="XXL">XXL</option>
-                  <option value="XXL">XXL</option>
+                  <option value="XXXL">XXXL</option>
                 </select>
               </div>
 

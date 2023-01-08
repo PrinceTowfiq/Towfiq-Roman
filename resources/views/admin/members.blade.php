@@ -58,7 +58,7 @@
                                                 
                                                 <th>DOB</th>
                                                 <th>Photo</th>
-                                                {{-- <th>Action</th> --}}
+                                                <th>Action</th>
                                             </tr>
                                             </thead>
         
@@ -72,6 +72,10 @@
                                                         <td>{{$member->mobile_number}}</td>
                                                         <td>{{$member->email}}</td>
                                                         <td>{{$member->father_name}}</td>
+                                                        <td>
+                                                            {{-- <a href="" class="btn btn-info btn-sm"><i class=" fa fa-eye" ></i></a> --}}
+                                                            <a href="{{ route('admin.member-edit', $member->id)}}" class="btn btn-success btn-sm"><i class=" fa fa-edit" ></i></a>
+                                                        </td>
                                                         <td>{{$member->mother_name}}</td>
                                                         <td>{{$member->spouse_name}}</td>
                                                         <td>{{$member->spouse_dob}}</td>
@@ -95,7 +99,7 @@
                                                         <td>{{$member->child_dob_3}}</td>
                                                         <td>{{$member->bob}}</td>
                                                         <td> <img src=" {{asset('uploads')}}/{{$member->image}}" width="150px;"> </td>
-                                                        {{-- <td>Edit</td> --}}
+                                                        
                                                     </tr>
                                                 @endforeach
                                             
