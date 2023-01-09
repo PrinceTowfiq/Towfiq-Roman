@@ -33,6 +33,7 @@ Route::middleware(["auth"])->group(function () {
     })->name('admin.home');
 
     Route::get('admin/members', [MembersController::class, 'index'])->name('admin.members');
+    Route::get('admin/export-csv', [MembersController::class, 'exportCsv'])->name('admin.export');
     Route::get('admin/member-edit/{id}', [MembersController::class, 'editMember'])->name('admin.member-edit');
     Route::post('admin/member-update/{id}', [MembersController::class, 'updateMember'])->name('admin.member-update');
 });

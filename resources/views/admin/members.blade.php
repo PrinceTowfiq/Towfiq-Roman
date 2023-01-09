@@ -21,9 +21,13 @@
                                 <div class="card">
                                     <div class="card-body">
         
-                                        <h4 class="mt-0 header-title">Members Information</h4>
-                                        <p class="text-muted mb-4 font-13"> </p>
-        
+                                        <div>
+                                            <h4 class="mt-0 header-title float-left">Members Information</h4>
+                                            <a href="{{ route('admin.export') }}" class="btn btn-info btn-sm float-right"> <i class="fa fa-download"></i> Export CSV </a>
+                                        </div>
+        <br>
+        <br>
+        <br>
                                         <table id="member-datatable" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                             <tr>
@@ -306,15 +310,6 @@
     <!-- Required datatable js -->
     <script src="{{asset('admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('admin/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
-    <!-- Buttons examples -->
-    <script src="{{asset('admin/plugins/datatables/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/jszip.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/pdfmake.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/vfs_fonts.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/buttons.print.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/datatables/buttons.colVis.min.js')}}"></script>
 
     <!-- Responsive examples -->
     <script src="{{asset('admin/plugins/datatables/dataTables.responsive.min.js')}}"></script>

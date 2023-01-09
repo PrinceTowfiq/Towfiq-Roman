@@ -70,4 +70,56 @@ class MembersController extends Controller
     {
         return MemberData::findOrFail($id);
     }
+
+    public function exportCsv()
+    {
+        $members = MemberData::orderBy('id', 'ASC')->get();
+        $fileName = time() . '.csv';
+
+        $headers = array(
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=$fileName",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        );
+
+        $columns = array('Name', 'Member ID', 'Father\'s Name', 'Mother\'s Name', 'Mobile No', 'Whatsapp No', 'Email', 'Date of Birth', 'Spouse Name', 'Spouse Date of Birth', 'Anniversary Date', 'Profession', 'Organization', 'Blood Group', 'NID Number', 'TIN Number', 'T-shirt Size', 'Address (Where CECL will Communicate)', 'Present address', 'Permanent address', 'Cultural Engagement', 'Membership ID (referred by)');
+
+        $callback = function () use ($members, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns);
+
+            foreach ($members as $task) {
+                $row['Name']    = $task->name;
+                $row['Member ID']  = $task->member_id;
+                $row['Father\'s Name']    = $task->father_name;
+                $row['Mother\'s Name']  = $task->mother_name;
+                $row['Mobile No']  = $task->mobile_number;
+                $row['Whatsapp No']  = $task->whatsapp_number;
+                $row['Email']  = $task->email;
+                $row['Date of Birth']  = $task->bob;
+                $row['Spouse Name']  = $task->spouse_name;
+                $row['Spouse Date of Birth']  = $task->spouse_dob;
+                $row['Anniversary Date']  = $task->anniversary_date;
+                $row['Profession']  = $task->profession;
+                $row['Organization']  = $task->organization;
+                $row['Blood Group']  = $task->blood_group;
+                $row['NID Number']  = $task->nid;
+                $row['TIN Number']  = $task->tin;
+                $row['T-shirt Size']  = $task->tshirt_size;
+                $row['Address (Where CECL will Communicate)']  = $task->address;
+                $row['Present address']  = $task->present_address;
+                $row['Permanent address']  = $task->permanent_address;
+                $row['Cultural Engagement']  = $task->cultural_engagement;
+                $row['Membership ID (referred by)']  = $task->membership;
+
+                fputcsv($file, array($row['Name'], $row['Member ID'], $row['Father\'s Name'], $row['Mother\'s Name'], $row['Mobile No'], $row['Whatsapp No'], $row['Email'], $row['Date of Birth'], $row['Spouse Name'], $row['Spouse Date of Birth'], $row['Anniversary Date'], $row['Profession'], $row['Organization'], $row['Blood Group'], $row['NID Number'], $row['TIN Number'], $row['T-shirt Size'], $row['Address (Where CECL will Communicate)'], $row['Present address'], $row['Permanent address'], $row['Cultural Engagement'], $row['Membership ID (referred by)']));
+            }
+
+            fclose($file);
+        };
+
+        return response()->stream($callback, 200, $headers);
+    }
 }
