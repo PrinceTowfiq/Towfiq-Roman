@@ -161,19 +161,21 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div id="editor"></div>
+
+        <div class="modal-body" id="content1">
             <div class="my-3 text-center rounded-circle">
-                <img class=" rounded-circle image" style="width: 100%; max-width:200px;" src="https://i.picsum.photos/id/702/200/200.jpg?hmac=_MUIgyTefzE4vp8ty09HrdKNmvqdpg5tbSxk6FpIfcE" alt="" srcset="">
+                <img class=" rounded-circle image" style="width: 100%; max-width:200px; max-height:300px;" src="" alt="" srcset="">
             </div>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <th>Member ID:</th>
-                        <td class="member_id">Roman</td>
-                    </tr>
-                    <tr>
                         <th>Name:</th>
                         <td class="name" >Roman</td>
+                    </tr>
+                    <tr>
+                        <th>Member ID:</th>
+                        <td class="member_id">Roman</td>
                     </tr>
                     <tr>
                         <th>Father's Name:</th>
@@ -287,11 +289,12 @@
                 </tbody>
             </table>
 
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-info btn-sm" id="btnPrint">Print</button>
+                <button class="btn btn-info btn-sm"  id="export" onclick="exportPDF('content1')">Print</button>
+            </div>
 
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <a href="" class="btn btn-info btn-sm" id="btnPrint">Print</a>
         </div>
       </div>
     </div>
@@ -403,5 +406,46 @@
                     })
 
             } );       
+    </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js'></script>
+    <script>
+        var specialElementHandlers = {
+            // element with id of "bypass" - jQuery style selector
+            '.no-export': function (element, renderer) {
+                // true = "handled elsewhere, bypass text extraction"
+                return true;
+            }
+        };
+
+        function exportPDF(id) {
+            var doc = new jsPDF('p', 'pt', 'a4');
+            //A4 - 595x842 pts
+       
+            //Html source 
+            var source = document.getElementById(id);
+            // console.log(source);
+            var margins = {
+                top: 50,
+                bottom: 10,
+                left: 50,
+                width: 595
+            };
+
+            doc.fromHTML(
+                source, // HTML string or DOM elem ref.
+                margins.left,
+                margins.top, {
+                    'width': margins.width,
+                    'elementHandlers': specialElementHandlers
+                },
+
+                function (dispose) {
+                    doc.save('cecl-member.pdf');
+                }, margins
+            );
+        }
+
+
     </script>
 @endpush
